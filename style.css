@@ -1,0 +1,86 @@
+*{
+    margin: 1px;
+}
+
+.container{
+    height: 90vh;
+    width: 90vh;
+    background: blue;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+
+}
+
+.parent{
+    height: 50vh;
+    width: 50vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    animation: square 2s infinite linear;
+}
+
+h2{
+    /* position: relative; */
+
+    animation: square 1000ms infinite reverse linear;
+}
+
+.ball{
+    height: 50px;
+    width: 50px;
+    background: radial-gradient(white,red);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    animation: circle 3s linear infinite;
+}
+
+@keyframes circle{
+    0%{
+        left: 50px;
+        top: 50px;
+    }
+    25%{
+        left: 90%;
+        top: 50px;
+    }
+    50%{
+        left: 90%;
+        top: 90%;
+    }
+    75%{
+        left: 50px;
+        top: 90%;
+    }
+
+    100%{
+        left: 50px;
+        top: 50px;
+    }
+}
+
+@keyframes square {
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
